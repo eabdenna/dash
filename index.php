@@ -12,7 +12,7 @@ include '../assets/layouts/header.php';
  ?>  
  <style>
 body { text-align:center;
-     background-image: url('back3.jpg');
+     background-image: url('../welcome/back4.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: 100% 100%; }
@@ -72,9 +72,11 @@ body { text-align:center;
            <div style="width:1500px;">  
                 <h3 class="text-center text-info">Dashboard</h3>  
                 <br />  
-                  
+
            </div> 
-           <div class="ui-widget">
+           <div class="float-right" id="piechart" style="width: 550px; height: 200px;"></div> 
+<div class="bg-white">
+           <center><div class="ui-widget">
   <h1 class="ui-value">15</h1>
   <span class="ui-label">Doors</span>
 </div>
@@ -87,15 +89,14 @@ body { text-align:center;
 <div class="ui-widget">
   <h1 class="ui-value">20</h1>
   <span class="ui-label">Staff</span>
+</div></center>
 </div>
-           <div class=" float-left" id="piechart" style="width: 600px; height: 500px;"></div>  
-
            <div class="container">
 
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-lg-12">
             <div class="table-responsive">        
-                <table id="tablaUsuarios" class=" float-right table table-striped table-bordered table-condensed" style="width:100%" >
+                <table id="tablaUsuarios" class=" table table-striped table-bordered  table-dark table-condensed" style="width:100%" >
                     <thead class="text-center">
                         <tr>
                             <th>username</th>
