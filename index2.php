@@ -2,16 +2,24 @@
 define('TITLE', "Membres");
 include '../assets/layouts/header.php';
 
-check_admin();
 
 
 ?>
 <?php  
- $connect = mysqli_connect("localhost", "broadseg", "1122334499", "broadseg");  
+ $connect = mysqli_connect("localhost", "root", "root", "broadseg1");  
  $query = "SELECT direction, count(*) as number FROM log GROUP BY direction";  
  $result = mysqli_query($connect, $query);  
  ?>  
  <style>
+body { text-align:center;
+     background-image: url('back3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%; }
+.ui-widget { position:relative; display:inline-block; width:160px; height:160px; margin:30px; border:15px solid #00aeef; border-radius:150px; text-align:center; font-family: Arial, sans-serif; box-shadow:inset 0 1px 0 rgba(255,255,255,.8), inset 0 3px 5px rgba(0,0,0,.25); box-sizing:border-box; border-bottom-color:#fff }
+.ui-widget .ui-value { position:absolute; left:0; right:0; top:15px; font-size:40px; }
+.ui-widget .ui-label { position:absolute; left:0; bottom:-10px; width:100%; font-size:14px; text-transform:uppercase; color:#888; font-weight:700 }
+
 
 
 </style>
@@ -62,10 +70,24 @@ check_admin();
                      
 
            <div style="width:1500px;">  
-                <h3 class="text-center text-secondary">Dashboard</h3>  
+                <h3 class="text-center text-info">Dashboard</h3>  
                 <br />  
                   
            </div> 
+           <div class="ui-widget">
+  <h1 class="ui-value">15</h1>
+  <span class="ui-label">Doors</span>
+</div>
+
+<div class="ui-widget">
+  <h1 class="ui-value">342</h1>
+  <span class="ui-label">Students</span>
+</div>
+
+<div class="ui-widget">
+  <h1 class="ui-value">20</h1>
+  <span class="ui-label">Staff</span>
+</div>
            <div class=" float-left" id="piechart" style="width: 600px; height: 500px;"></div>  
 
            <div class="container">
